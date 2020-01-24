@@ -1,0 +1,29 @@
+.nav{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top :0;
+    left: 0;
+    width: 100vw;
+    height: 5rem;
+    padding: 0 8rem;
+
+    .nav-brand{
+        color: $secondary-color;
+    }
+
+    .nav-links{
+        display: flex;
+        margin-left: auto;
+        list-style: none;
+        li{
+            a{
+                font-family: 'Fira Mono';
+                color: $primary-color;
+            }
+            &:not(:last-child){
+                margin-right: 3rem;
+            }
+        }
+    }
+}

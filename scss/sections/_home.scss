@@ -1,0 +1,70 @@
+.home {
+    h1 {
+        font-family: 'Product Sans Regular';
+        color: $primary-color;
+        font-size: 5rem;
+        font-stretch: semi-expanded;
+        opacity: 0;
+        animation: appear 0.5s ease-out 0.25s 1 normal forwards;
+    }
+
+    h4 {
+        font-family: 'Fira Mono';
+        color: $secondary-color;
+        font-size: 1.2rem;
+        font-weight: normal;
+        margin-bottom: 1.3rem;
+        opacity: 0;
+        animation: appear 0.5s ease-out 0s 1 normal forwards ;
+        margin-left: 4px;
+    }
+
+    h2 {
+        font-family: 'Product Sans Regular';
+        color: $secondary-color;
+        font-size: 4rem;
+        opacity: 0;
+        animation: appear 0.5s ease-out 0.5s 1 normal forwards ;
+        margin-top: 0.5rem;
+    }
+
+    p{
+        margin-top: 3rem;
+        color: $primary-color;
+        font-family: 'Fira Mono';
+        font-size: 1.2rem;
+        line-height: 30px;
+        opacity: 0;
+        animation: appear 0.5s ease-out 0.75s 1 normal forwards ;
+    }
+
+    button{
+        padding : 0.8rem;
+        font-size: 1rem;
+        font-family: 'Fira Mono';
+        margin-top: 5rem;
+        background: none;
+        color: $secondary-color;
+        border: $secondary-color solid 1px;
+        border-radius: 0.2rem;
+        cursor: pointer;
+        opacity: 0;
+        animation: appear 0.5s ease-out 1s 1 normal forwards ;
+        transition: background ease-in 0.1s;
+        
+        &:hover{
+            background: rgba($color: #fff, $alpha: 0.1);
+        }
+    }
+}
+
+@keyframes appear{
+    0%{
+        opacity: 0;
+        transform : translateY(2rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }   
+}
