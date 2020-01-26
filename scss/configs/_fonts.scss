@@ -179,3 +179,10 @@
     font-weight: normal;
     src: local('Product Sans Black Italic'), url('../assets/fonts/ProductSans/ProductSans-BlackItalic.woff') format('woff');
 }
+
+@font-face {
+    font-family: 'Fira Mono';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Fira Mono'), url('FiraMono-Regular.woff') format('woff');
+}

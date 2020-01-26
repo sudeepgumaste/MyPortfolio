@@ -6,31 +6,32 @@
     margin: 7rem 0;
 }
 
-@include mediaLg {
+@include mediaLg { //1552
+    .container {
+        margin: 5rem 0;
+        max-width: 50rem;
+    }
+}
+
+@include mediaMd { //1165
     .container {
         margin: 5rem 0;
         max-width: 45rem;
     }
 }
 
-@include mediaMd {
+@include mediaSm { //768
     .container {
-        margin: 5rem 0;
+        margin: 5rem 1rem;
         max-width: 35rem;
     }
 }
 
-@include mediaSm {
+@include mediaXs { //600
     .container {
-        margin: 5rem 1rem;
-        max-width: 25rem;
-    }
-}
-
-@include mediaXs {
-    .container {
+        margin-top: 15rem;
         margin: 5rem 1rem;
         padding: 0 1rem;
-        max-width: 20rem;
+        max-width: 23rem;
     }
 }
