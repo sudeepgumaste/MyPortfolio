@@ -37,6 +37,7 @@
         line-height: 30px;
         opacity: 0;
         animation: appear 0.5s ease-out 0.75s 1 normal forwards ;
+        padding-right: 15rem;
     }
 
     button{
@@ -60,6 +61,21 @@
 
         &:focus{
             background: rgba($color: #FFF, $alpha: 0.2);
+        }
+    }
+
+    .contact{
+        margin-top: 1.5rem;
+        a{
+            width: 3rem;
+            height: 3rem;
+            &:not(:last-child){
+                margin-right: 1.5rem;
+            }
+            img{
+                width: 2rem;
+                height: 2rem;
+            }
         }
     }
 }
@@ -89,14 +105,32 @@
 @include mediaMd{
     .home{
         h1{
-            font-size: 3.3rem;
-            margin-bottom: 1.5rem;
+            font-size: 4.3rem;
+            margin-bottom: 3.3rem;
+            margin-bottom: 1rem;
         }
         h2{
             font-size: 3rem;
         }
         h4,p{
             font-size: 1.3rem;
+        }
+        p{
+            padding-right: 10rem;
+        }
+    }
+}
+
+@include mediaSm{
+    .home{
+        h1{
+            font-size: 3.6rem;
+        }
+        h2{
+            font-size: 2.8rem;
+        }
+        p{
+            padding-right: 5rem;
         }
     }
 }
@@ -111,6 +145,9 @@
         }
         h4,p{
             font-size: 1rem;
+        }
+        p{
+            padding-right: 0;
         }
     }
 }
