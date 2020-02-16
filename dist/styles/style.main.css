@@ -14,69 +14,6 @@
 }
 
 @font-face {
-  font-family: 'Tourmaline Bold';
-  font-style: normal;
-  font-weight: normal;
-  src: local("Tourmaline Bold"), url("../assets/fonts/Tourmaline/Tourmaline-Bold.woff") format("woff");
-}
-
-@font-face {
-  font-family: 'Tourmaline Brush';
-  font-style: normal;
-  font-weight: normal;
-  src: local("Tourmaline Brush"), url("../assets/fonts/Tourmaline/Tourmaline-Brush.woff") format("woff");
-}
-
-@font-face {
-  font-family: 'Tourmaline Deconstructed';
-  font-style: normal;
-  font-weight: normal;
-  src: local("Tourmaline Deconstructed"), url("../assets/fonts/Tourmaline/Tourmaline-Deconstructed.woff") format("woff");
-}
-
-@font-face {
-  font-family: 'Tourmaline Deconstructed 2';
-  font-style: normal;
-  font-weight: normal;
-  src: local("Tourmaline Deconstructed 2"), url("../assets/fonts/Tourmaline/Tourmaline-Deconstructed2.woff") format("woff");
-}
-
-@font-face {
-  font-family: 'Tourmaline Evolution';
-  font-style: normal;
-  font-weight: normal;
-  src: local("Tourmaline Evolution"), url("../assets/fonts/Tourmaline/Tourmaline-Evolution.woff") format("woff");
-}
-
-@font-face {
-  font-family: 'Tourmaline Geek';
-  font-style: normal;
-  font-weight: normal;
-  src: local("Tourmaline Geek"), url("../assets/fonts/Tourmaline/Tourmaline-Geek.woff") format("woff");
-}
-
-@font-face {
-  font-family: 'Tourmaline Glitch';
-  font-style: normal;
-  font-weight: normal;
-  src: local("Tourmaline Glitch"), url("../assets/fonts/Tourmaline/Tourmaline-Glitch.woff") format("woff");
-}
-
-@font-face {
-  font-family: 'Tourmaline Lines';
-  font-style: normal;
-  font-weight: normal;
-  src: local("Tourmaline Lines"), url("../assets/fonts/Tourmaline/Tourmaline-Lines.woff") format("woff");
-}
-
-@font-face {
-  font-family: 'Tourmaline Printed';
-  font-style: normal;
-  font-weight: normal;
-  src: local("Tourmaline Printed"), url("../assets/fonts/Tourmaline/Tourmaline-Printed.woff") format("woff");
-}
-
-@font-face {
   font-family: 'Product Sans Regular';
   font-style: normal;
   font-weight: normal;
@@ -84,87 +21,10 @@
 }
 
 @font-face {
-  font-family: 'Product Sans Italic';
-  font-style: normal;
-  font-weight: normal;
-  src: local("Product Sans Italic"), url("../assets/fonts/ProductSans/ProductSans-Italic.woff") format("woff");
-}
-
-@font-face {
-  font-family: 'Product Sans Thin Regular';
-  font-style: normal;
-  font-weight: normal;
-  src: local("Product Sans Thin Regular"), url("../assets/fonts/ProductSans/ProductSans-Thin.woff") format("woff");
-}
-
-@font-face {
-  font-family: 'Product Sans Light Regular';
-  font-style: normal;
-  font-weight: normal;
-  src: local("Product Sans Light Regular"), url("../assets/fonts/ProductSans/ProductSans-Light.woff") format("woff");
-}
-
-@font-face {
-  font-family: 'Product Sans Medium Regular';
-  font-style: normal;
-  font-weight: normal;
-  src: local("Product Sans Medium Regular"), url("../assets/fonts/ProductSans/ProductSans-Medium.woff") format("woff");
-}
-
-@font-face {
-  font-family: 'Product Sans Black Regular';
-  font-style: normal;
-  font-weight: normal;
-  src: local("Product Sans Black Regular"), url("../assets/fonts/ProductSans/ProductSans-Black.woff") format("woff");
-}
-
-@font-face {
-  font-family: 'Product Sans Thin Italic';
-  font-style: normal;
-  font-weight: normal;
-  src: local("Product Sans Thin Italic"), url("../assets/fonts/ProductSans/ProductSans-ThinItalic.woff") format("woff");
-}
-
-@font-face {
-  font-family: 'Product Sans Light Italic';
-  font-style: normal;
-  font-weight: normal;
-  src: local("Product Sans Light Italic"), url("../assets/fonts/ProductSans/ProductSans-LightItalic.woff") format("woff");
-}
-
-@font-face {
-  font-family: 'Product Sans Medium Italic';
-  font-style: normal;
-  font-weight: normal;
-  src: local("Product Sans Medium Italic"), url("../assets/fonts/ProductSans/ProductSans-MediumItalic.woff") format("woff");
-}
-
-@font-face {
-  font-family: 'Product Sans Bold';
-  font-style: normal;
-  font-weight: normal;
-  src: local("Product Sans Bold"), url("../assets/fonts/ProductSans/ProductSans-Bold.woff") format("woff");
-}
-
-@font-face {
-  font-family: 'Product Sans Bold Italic';
-  font-style: normal;
-  font-weight: normal;
-  src: local("Product Sans Bold Italic"), url("../assets/fonts/ProductSans/ProductSans-BoldItalic.woff") format("woff");
-}
-
-@font-face {
-  font-family: 'Product Sans Black Italic';
-  font-style: normal;
-  font-weight: normal;
-  src: local("Product Sans Black Italic"), url("../assets/fonts/ProductSans/ProductSans-BlackItalic.woff") format("woff");
-}
-
-@font-face {
   font-family: 'Fira Mono';
   font-style: normal;
   font-weight: normal;
-  src: local("Fira Mono"), url("FiraMono-Regular.woff") format("woff");
+  src: local("Fira Mono"), url("../assets/fonts/FiraMono/FiraMono-Regular.woff") format("woff");
 }
 
 *,
@@ -192,6 +52,7 @@ input:focus {
 }
 
 body {
+  overflow-x: hidden;
   scroll-behavior: smooth;
   background: #000424;
 }
@@ -209,6 +70,14 @@ section {
           justify-content: center;
   width: 100%;
   height: 100vh;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+}
+
+textarea {
+  resize: none;
 }
 
 .container {
@@ -270,16 +139,20 @@ section {
 }
 
 .nav {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 5rem;
   padding: 0 8rem;
+  background: #000424;
+  z-index: 100;
 }
 
 .nav .nav-brand {
@@ -326,6 +199,19 @@ section {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 1165px) {
+  .nav {
+    padding: 0 2rem;
+  }
+  .nav .nav-brand {
+    font-size: 1.7rem;
+    opacity: 0;
+  }
+  .nav .nav-links {
+    display: none;
   }
 }
 
@@ -400,23 +286,23 @@ section {
   background: rgba(255, 255, 255, 0.2);
 }
 
-.home .contact {
+.home__contact {
   -webkit-animation: appear 0.5s ease-out 1s 1 normal forwards;
           animation: appear 0.5s ease-out 1s 1 normal forwards;
   margin-top: 1.5rem;
   opacity: 0;
 }
 
-.home .contact a {
+.home__contact a {
   width: 3rem;
   height: 3rem;
 }
 
-.home .contact a:not(:last-child) {
+.home__contact a:not(:last-child) {
   margin-right: 1.5rem;
 }
 
-.home .contact a img {
+.home__contact a img {
   width: 2rem;
   height: 2rem;
 }
@@ -498,5 +384,48 @@ section {
   .home p {
     padding-right: 0;
   }
+}
+
+.contact h1 {
+  font-family: 'Product Sans Regular';
+  color: #d1ced5;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.contact__form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem 3rem;
+  border-radius: 0.3rem;
+}
+
+.contact__form input, .contact__form textarea {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  margin: 1rem 0rem;
+  padding: 1rem 1rem;
+  border-radius: 0.3rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1rem;
+}
+
+.contact__form input:focus, .contact__form textarea:focus {
+  -webkit-box-shadow: 0 0 3pt 1pt rgba(255, 255, 255, 0.4);
+          box-shadow: 0 0 3pt 1pt rgba(255, 255, 255, 0.4);
+}
+
+.contact__form .button {
+  margin-top: 2rem;
+  width: 35%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 /*# sourceMappingURL=style.main.css.map */

@@ -16,7 +16,7 @@
             &ltSudeep/&gt
         </h1>
         <ul class="nav-links" orientation="right">
-            <li>
+            <!-- <li>
                 <a href="">
                     About Me
                 </a>
@@ -30,9 +30,9 @@
                 <a href="">
                     Projects
                 </a>
-            </li>
+            </li> -->
             <li>
-                <a href="">
+                <a href="#contact">
                     Get in Touch
                 </a>
             </li>
@@ -44,14 +44,14 @@
         </ul>
     </nav>
     <main>
-        <section class="home">
+        <section class="home" id="home">
             <div class="container">
                 <h4>Hello there! My name is</h4>
                 <h1>Sudeep Gumaste.</h1>
                 <h2>I am a full stack web developer.</h2>
                 <p>I specialize in developing, designing and deploying elegant responsive websites and web applications</p>
                 <button>Contact Me!</button>
-                <div class="contact">
+                <div class="home__contact">
                     <a href="https://github.com/sudeepgumaste">
                         <img src="./assets/logos/github-logo.svg" alt="github">
                     </a>
@@ -59,6 +59,18 @@
                         <img src="./assets/logos/linkedin.svg" alt="linkedin">
                     </a>
                 </div>
+            </div>
+        </section>
+        <section class="contact" id="contact">
+            <div class="container">
+                <h1>Contact Me</h1>
+                <form action="" class="contact__form">
+                    <input type="text"  name="name" placeholder="Your name ">
+                    <input type="email"  name="email" placeholder="Your email">
+                    <input type="text"  name="subject" placeholder="Subject">
+                    <textarea name="description" placeholder="Message" rows="9"></textarea>
+                    <button class="button" type="submit">Send</button>
+                </form>
             </div>
         </section>
     </main>
