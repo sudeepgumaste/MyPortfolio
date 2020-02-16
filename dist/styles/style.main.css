@@ -401,7 +401,10 @@ section {
 }
 
 .home .contact {
+  -webkit-animation: appear 0.5s ease-out 1s 1 normal forwards;
+          animation: appear 0.5s ease-out 1s 1 normal forwards;
   margin-top: 1.5rem;
+  opacity: 0;
 }
 
 .home .contact a {
