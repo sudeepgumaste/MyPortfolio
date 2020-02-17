@@ -1,0 +1,9 @@
+.footer{
+  display: flex;
+  height: 5rem;
+  width: 100vw;
+  background: rgba($color: black, $alpha: 0.5);
+  align-items: center;
+  justify-content: center;
+  color: $primary-color;
+}

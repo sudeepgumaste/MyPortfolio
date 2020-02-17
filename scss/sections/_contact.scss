@@ -36,3 +36,15 @@
     }
   }
 }
+
+@include mediaMd{
+  .contact{
+    h1{
+      font-size: 1.6rem;
+    }
+    &__form{
+      padding: 0rem;
+      margin: 0rem;
+    }
+  }
+}
