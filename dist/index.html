@@ -7,77 +7,84 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="author" content="Sudeep Gumaste">
     <link rel="stylesheet" href="./styles/style.main.css">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> -->
+    <script src="./scripts/main.js" defer></script>
     <!-- <link rel="icon" href="/images/favicon.ico?" type="image/x-icon"> -->
     <title>Sudeep Gumaste</title>
 </head>
 
 <body>
-    <nav class="nav">
-        <h1 class="nav-brand">
-            &ltSudeep/&gt
-        </h1>
-        <ul class="nav-links" orientation="right">
-            <!-- <li>
-                <a href="">
-                    About Me
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    Experience
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    Projects
-                </a>
-            </li> -->
-            <li>
-                <a href="#contact">
-                    Get in Touch
-                </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/1MucgFwY1zHgSnPKb0Ygt0WfHo3g37tJS/view?usp=sharing" class="button">
-                    Resume
-                </a>
-            </li>
-        </ul>
-    </nav>
-    <main>
-        <section class="home" id="home">
-            <div class="container">
-                <h4>Hello there! My name is</h4>
-                <h1>Sudeep Gumaste.</h1>
-                <h2>I am a full stack web developer.</h2>
-                <p>I specialize in developing, designing and deploying elegant responsive websites and web applications</p>
-                <button>Contact Me!</button>
-                <div class="home__contact">
-                    <a href="https://github.com/sudeepgumaste">
-                        <img src="./assets/logos/github-logo.svg" alt="github">
+    <div class="loading-overlay">
+        <img src="./assets/logos/logo.svg" alt="Loading...">
+    </div>
+    <div class="content">
+        <nav class="nav">
+            <h1 class="nav-brand">
+                &ltSudeep/&gt
+            </h1>
+            <ul class="nav-links" orientation="right">
+                <!-- <li>
+                    <a href="">
+                        About Me
                     </a>
-                    <a href="https://www.linkedin.com/in/sudeep-gumaste?originalSubdomain=in">
-                        <img src="./assets/logos/linkedin.svg" alt="linkedin">
+                </li>
+                <li>
+                    <a href="">
+                        Experience
                     </a>
+                </li>
+                <li>
+                    <a href="">
+                        Projects
+                    </a>
+                </li> -->
+                <li>
+                    <a href="#contact">
+                        Get in Touch
+                    </a>
+                </li>
+                <li>
+                    <a href="https://drive.google.com/file/d/1MucgFwY1zHgSnPKb0Ygt0WfHo3g37tJS/view?usp=sharing" class="button">
+                        Resume
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <section class="home" id="home">
+                <div class="container">
+                    <h4>Hello there! My name is</h4>
+                    <h1>Sudeep Gumaste.</h1>
+                    <h2>I am a full stack web developer.</h2>
+                    <p>I specialize in developing, designing and deploying elegant responsive websites and web applications</p>
+                    <button>Contact Me!</button>
+                    <div class="home__contact">
+                        <a href="https://github.com/sudeepgumaste">
+                            <img src="./assets/logos/github-logo.svg" alt="github">
+                        </a>
+                        <a href="https://www.linkedin.com/in/sudeep-gumaste?originalSubdomain=in">
+                            <img src="./assets/logos/linkedin.svg" alt="linkedin">
+                        </a>
+                    </div>
                 </div>
-            </div>
-        </section>
-        <section class="contact" id="contact">
-            <div class="container">
-                <h1>Contact Me</h1>
-                <form class="contact__form" action="https://formspree.io/mlebywbn" method="POST">
-                    <input required type="text"  name="name" placeholder="Your name ">
-                    <input required type="email"  name="email" placeholder="Your email">
-                    <input required type="text"  name="subject" placeholder="Subject">
-                    <textarea required name="description" placeholder="Message" rows="9"></textarea>
-                    <button class="button" type="submit">Send</button>
-                </form>
-            </div>
-        </section>
-    </main>
-    <footer class="footer">
-        <p>Designed and Developed by Sudeep Gumaste</p>
-    </footer>
+            </section>
+            <section class="contact" id="contact">
+                <div class="container">
+                    <h1>Contact Me</h1>
+                    <form class="contact__form" action="https://formspree.io/mlebywbn" method="POST">
+                        <input required type="text"  name="name" placeholder="Your name ">
+                        <input required type="email"  name="email" placeholder="Your email">
+                        <input required type="text"  name="subject" placeholder="Subject">
+                        <textarea required name="description" placeholder="Message" rows="9"></textarea>
+                        <button class="button" type="submit">Send</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <p>Designed and Developed by Sudeep Gumaste</p>
+        </footer>
+    </div>
 </body>
 
 </html>

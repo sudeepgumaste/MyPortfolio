@@ -1,6 +1,6 @@
 .home {
     h1 {
-        font-family: 'Product Sans Regular';
+        font-family: 'Product Sans Regular', 'Open Sans', sans-serif;
         color: $primary-color;
         font-size: 5rem;
         font-stretch: semi-expanded;
@@ -21,7 +21,7 @@
     }
 
     h2 {
-        font-family: 'Product Sans Regular';
+        font-family: 'Product Sans Regular', 'Open Sans', sans-serif;
         color: $secondary-color;
         font-size: 4rem;
         opacity: 0;

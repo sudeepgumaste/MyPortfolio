@@ -42,3 +42,44 @@ input:focus, textarea:focus{
 textarea{
     resize: none;
 }
+
+
+.content{
+    display: none;
+    &.appear{
+        display: block;
+    }
+}
+
+
+.loading-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    // background: black;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    
+    img{
+        width: 5rem;
+        animation: rotate-logo 1.5s ease 0s infinite normal;
+    }
+
+    &.dissappear{
+        display: none;
+    }
+}
+
+@keyframes rotate-logo{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(356deg);
+    }
+}
