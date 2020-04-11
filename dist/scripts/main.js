@@ -4,4 +4,4 @@ const loadingOverlay = document.querySelector('.loading-overlay')
 setTimeout(()=>{
   content.classList.add('appear')
   loadingOverlay.classList.add('dissappear')
-}, 3000)
+}, 2000)
