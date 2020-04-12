@@ -1,5 +1,14 @@
 .about {
   $root : &;
+  opacity: 0;
+  transform: translateY(5rem);
+  transition: opacity ease 0.9s, transform ease 0.9s;
+
+  &.visible{
+  transform: translateY(0rem);
+    opacity: 1;
+  }
+
   h1 {
     font-family: 'Product Sans Regular';
     color: $primary-color;
