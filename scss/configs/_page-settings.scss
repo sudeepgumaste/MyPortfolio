@@ -21,10 +21,8 @@ input, button:focus {
 }
 
 body {
-    overflow-x: hidden;
-    scroll-behavior: smooth;
+    overflow: hidden;
     background: $background-primary-color;
-
 }
 
 section {
@@ -46,6 +44,10 @@ textarea{
 
 .content{
     display: none;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100vh;
+    scroll-behavior: smooth;
     &.appear{
         display: block;
     }
