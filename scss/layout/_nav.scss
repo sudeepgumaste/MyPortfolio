@@ -77,6 +77,7 @@
                 height: 3px;
                 width: 3rem;
                 border: 1px solid $secondary-color;
+                border-radius: 2px;
 
                 &:nth-child(1) {
                     position: relative;
@@ -95,17 +96,11 @@
             &.toggled {
                 .nav__hamburger{
                     &:nth-child(1) {
-                        // position: absolute;
-                        transform: rotate(30deg) translate(16px, -3px);
-                        // right: -3px;
-                        // top: 0.8rem;
+                        transform: translateX(13px) translateY(5px) rotate(30deg);
                     }
     
                     &:nth-child(3) {
-                        // position: absolute;
-                        transform: rotate(-30deg) translate(6px, 14px);
-                        right: -3px;
-                        bottom: 0.8rem;
+                        transform: translateX(13px) translateY(-4px) rotate(-30deg);
                     }
                 }
             }
