@@ -1,8 +1,8 @@
-.nav{
+.nav {
     display: flex;
     align-items: center;
     position: fixed;
-    top :0;
+    top: 0;
     left: 0;
     width: 100%;
     height: 5rem;
@@ -13,82 +13,110 @@
 
     // border-bottom: white 1px solid;
 
-    .nav__brand{
+    .nav__brand {
         color: $primary-color;
         font-size: 2.2rem;
         opacity: 0;
-        animation: nav-appear 0.6s ease-out 0s 1 normal forwards ;
+        animation: nav-appear 0.6s ease-out 0s 1 normal forwards;
         font-family: 'Fira Mono';
     }
 
-    .nav__toggle{
+    .nav__toggle {
         display: none;
     }
-    
 
-    .nav__links{
+
+    .nav__links {
         display: flex;
         margin-left: auto;
         list-style: none;
-        li{
-            a{
+
+        li {
+            a {
                 font-family: 'Fira Mono';
                 color: $primary-color;
             }
-            &:not(:last-child){
+
+            &:not(:last-child) {
                 margin-right: 3rem;
             }
         }
+
         opacity: 0;
-        animation: nav-appear 0.6s ease-out 0s 1 normal forwards ;
+        animation: nav-appear 0.6s ease-out 0s 1 normal forwards;
     }
 }
 
 
-@include mediaMd{
-    .nav{
+@include mediaMd {
+    .nav {
         padding: 0 2rem;
         height: 4rem;
-        .nav__brand{
+
+        .nav__brand {
             font-size: 1.7rem;
             opacity: 0;
         }
 
-        .nav__toggle{
+        .nav__toggle {
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
-            align-items: flex-end;
+            align-items: center;
             height: 2.5rem;
             width: 3rem;
             margin-left: auto;
             background: none;
             padding: 0;
             border: $primary-color;
+            position: relative;
 
-            .nav__hamburger{
+            .nav__hamburger {
                 position: relative;
                 z-index: 7;
                 height: 3px;
-                width: 2.5rem;
+                width: 3rem;
                 border: 1px solid $secondary-color;
-                
-                &:nth-child(2){
-                    width: 2rem;
+
+                &:nth-child(1) {
+                    position: relative;
+                    width: 1.5rem;
+                    transition: all ease 0.3s;
                 }
 
-                &:nth-child(3){
+                &:nth-child(3) {
+                    position: relative;
                     width: 1.5rem;
+                    transition: all ease 0.3s;
+                }
+
+            }
+
+            &.toggled {
+                .nav__hamburger{
+                    &:nth-child(1) {
+                        // position: absolute;
+                        transform: rotate(30deg) translate(16px, -3px);
+                        // right: -3px;
+                        // top: 0.8rem;
+                    }
+    
+                    &:nth-child(3) {
+                        // position: absolute;
+                        transform: rotate(-30deg) translate(6px, 14px);
+                        right: -3px;
+                        bottom: 0.8rem;
+                    }
                 }
             }
         }
 
-        .nav__links{
+        .nav__links {
             position: absolute;
             top: 0;
             left: 100%;
             z-index: 5;
-            background-color: lighten($color: $background-secondary-color , $amount: 2%);
+            background-color: lighten($color: $background-secondary-color, $amount: 2%);
             height: 100vh;
             width: 75%;
             flex-direction: column;
@@ -96,11 +124,11 @@
             align-items: center;
             transition: transform ease 0.5s;
 
-            li{
+            li {
                 margin-right: 0 !important;
             }
 
-            &.toggled{
+            &.toggled {
                 transform: translateX(-100%);
             }
         }
@@ -109,11 +137,12 @@
 
 
 
-@keyframes nav-appear{
-    0%{
+@keyframes nav-appear {
+    0% {
         opacity: 0;
     }
-    100%{
+
+    100% {
         opacity: 1;
-    }   
+    }
 }
