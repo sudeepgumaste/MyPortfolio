@@ -17,5 +17,6 @@ navToggle.addEventListener('click', () => {
 for(let i =0; i<navLinks.children.length;i++){
   navLinks.children[i].addEventListener('click', ()=>{
     navLinks.classList.toggle('toggled');
+    navToggle.classList.toggle('toggled');
   })
 }
