@@ -255,38 +255,16 @@ textarea {
   height: 2rem;
 }
 
-@-webkit-keyframes appear {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(2rem);
-            transform: translateY(2rem);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
-@keyframes appear {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(2rem);
-            transform: translateY(2rem);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
 @media screen and (max-width: 1552px) {
   .home h1 {
-    font-size: 5rem;
+    font-size: 4.5rem;
   }
   .home h2 {
-    font-size: 4rem;
+    font-size: 3rem;
+  }
+  .home p {
+    font-size: 1rem;
+    padding-right: 10rem;
   }
 }
 
@@ -331,6 +309,32 @@ textarea {
   }
   .home p {
     padding-right: 0;
+  }
+}
+
+@-webkit-keyframes appear {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(2rem);
+            transform: translateY(2rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(2rem);
+            transform: translateY(2rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
@@ -628,6 +632,19 @@ textarea {
           transform-origin: left;
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
+}
+
+@media screen and (max-width: 1552px) {
+  .nav {
+    padding: 0 4rem;
+    height: 4rem;
+  }
+  .nav .nav__brand {
+    font-size: 1.6rem;
+  }
+  .nav .button {
+    padding: 0.5rem 1rem;
+  }
 }
 
 @media screen and (max-width: 1165px) {

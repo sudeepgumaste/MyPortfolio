@@ -82,24 +82,17 @@
     }
 }
 
-@keyframes appear{
-    0%{
-        opacity: 0;
-        transform : translateY(2rem);
-    }
-    100%{
-        opacity: 1;
-        transform: translateY(0);
-    }   
-}
-
 @include mediaLg{
     .home{
         h1{
-            font-size: 5rem;
+            font-size: 4.5rem;
         }
         h2{
-            font-size: 4rem;
+            font-size: 3rem;
+        }
+        p{
+            font-size: 1rem;
+            padding-right: 10rem;
         }
     }
 }
@@ -152,4 +145,15 @@
             padding-right: 0;
         }
     }
+}
+
+@keyframes appear{
+    0%{
+        opacity: 0;
+        transform : translateY(2rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }   
 }
