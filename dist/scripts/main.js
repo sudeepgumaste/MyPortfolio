@@ -24,7 +24,7 @@ for(let i =0; i<navLinks.children.length;i++){
 
 const observer = new IntersectionObserver((entries, observer)=>{
   entries.forEach(entry=>{
-    console.log(entry);
+    // console.log(entry);
     if(entry.isIntersecting || entry.intersectionRatio){
       entry.target.classList.add('visible');
       document.getElementById(`${entry.target.id}-link`).classList.add('visible')
