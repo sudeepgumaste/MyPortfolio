@@ -24,8 +24,8 @@ for(let i =0; i<navLinks.children.length;i++){
 
 const observer = new IntersectionObserver((entries, observer)=>{
   entries.forEach(entry=>{
-    // console.log(entry.target, entry.isIntersecting);
-    if(entry.isIntersecting){
+    console.log(entry);
+    if(entry.isIntersecting || entry.intersectionRatio){
       entry.target.classList.add('visible');
       document.getElementById(`${entry.target.id}-link`).classList.add('visible')
     }
@@ -35,8 +35,8 @@ const observer = new IntersectionObserver((entries, observer)=>{
     }
   });
 }, {
-  // rootMargin: "0px 0px -500px 0px ",
-  threshold: 0.5
+  rootMargin: "-50% 0px -50% 0px ",
+  // threshold: 0.25
 })
 
 sections.forEach(section=>{

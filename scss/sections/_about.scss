@@ -1,11 +1,11 @@
 .about {
   $root : &;
   opacity: 0;
-  transform: translateY(5rem);
+  transform: translateX(-2rem);
   transition: opacity ease 0.9s, transform ease 0.9s;
 
   &.visible{
-  transform: translateY(0rem);
+  transform: translateX(0rem);
     opacity: 1;
   }
 
