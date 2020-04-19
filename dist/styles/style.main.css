@@ -237,7 +237,7 @@ textarea {
 .home__contact {
   -webkit-animation: appear 0.5s ease-out 1s 1 normal forwards;
           animation: appear 0.5s ease-out 1s 1 normal forwards;
-  margin-top: 1.5rem;
+  margin-top: 2rem;
   opacity: 0;
 }
 
@@ -253,6 +253,15 @@ textarea {
 .home__contact a img {
   width: 2rem;
   height: 2rem;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+.home__contact a img:hover {
+  -webkit-transform: translateY(-0.5rem);
+          transform: translateY(-0.5rem);
 }
 
 @media screen and (max-width: 1552px) {
@@ -547,8 +556,8 @@ textarea {
   border: #6689a7 solid 1px;
   border-radius: 0.2rem;
   cursor: pointer;
-  -webkit-transition: background ease-in 0.1s;
-  transition: background ease-in 0.1s;
+  -webkit-transition: background ease 0.3s;
+  transition: background ease 0.3s;
 }
 
 .button:hover {
@@ -634,6 +643,36 @@ textarea {
           transform: scaleX(1);
 }
 
+.nav .nav__links__contact {
+  display: none;
+  margin-top: 2rem;
+  -webkit-transition: opacity ease 0.5s;
+  transition: opacity ease 0.5s;
+}
+
+.nav .nav__links__contact a {
+  width: 3rem;
+  height: 3rem;
+}
+
+.nav .nav__links__contact a:not(:last-child) {
+  margin-right: 1.5rem;
+}
+
+.nav .nav__links__contact a img {
+  width: 2rem;
+  height: 2rem;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+.nav .nav__links__contact a img:hover {
+  -webkit-transform: translateY(-0.5rem);
+          transform: translateY(-0.5rem);
+}
+
 @media screen and (max-width: 1552px) {
   .nav {
     padding: 0 4rem;
@@ -641,6 +680,9 @@ textarea {
   }
   .nav .nav__brand {
     font-size: 1.6rem;
+  }
+  .nav .nav__links__contact {
+    display: unset;
   }
   .nav .button {
     padding: 0.5rem 1rem;
