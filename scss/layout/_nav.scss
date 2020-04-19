@@ -96,12 +96,6 @@
             font-size: 1.6rem;
         }
 
-        .nav__links{
-            &__contact{
-                display: unset;
-            }
-        }
-
         .button{
             padding: 0.5rem 1rem;
         }
@@ -152,6 +146,12 @@
                     transition: all ease 0.3s;
                 }
 
+            }
+            
+            .nav__links{
+                &__contact{
+                    display: unset;
+                }
             }
 
             &.toggled {

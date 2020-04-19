@@ -681,9 +681,6 @@ textarea {
   .nav .nav__brand {
     font-size: 1.6rem;
   }
-  .nav .nav__links__contact {
-    display: unset;
-  }
   .nav .button {
     padding: 0.5rem 1rem;
   }
@@ -739,6 +736,9 @@ textarea {
     width: 1.5rem;
     -webkit-transition: all ease 0.3s;
     transition: all ease 0.3s;
+  }
+  .nav .nav__toggle .nav__links__contact {
+    display: unset;
   }
   .nav .nav__toggle.toggled .nav__hamburger:nth-child(1) {
     -webkit-transform: translateX(13px) translateY(5px) rotate(30deg);
