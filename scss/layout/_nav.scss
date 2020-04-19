@@ -25,7 +25,6 @@
         display: none;
     }
 
-
     .nav__links {
         display: flex;
         margin-left: auto;
@@ -62,7 +61,26 @@
                 }
             }
 
-
+        }
+        &__contact{
+            display: none;
+            margin-top: 2rem;
+            transition: opacity ease 0.5s;
+            a{
+                width: 3rem;
+                height: 3rem;
+                &:not(:last-child){
+                    margin-right: 1.5rem;
+                }
+                img{
+                    width: 2rem;
+                    height: 2rem;
+                    transition: transform 0.5s ease;
+                    &:hover{
+                        transform: translateY(-0.5rem);
+                    }
+                }
+            }
         }
 
         opacity: 0;
@@ -76,6 +94,12 @@
         height: 4rem;
         .nav__brand {
             font-size: 1.6rem;
+        }
+
+        .nav__links{
+            &__contact{
+                display: unset;
+            }
         }
 
         .button{

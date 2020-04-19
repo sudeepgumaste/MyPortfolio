@@ -2,7 +2,8 @@ const content = document.querySelector('.content');
 const loadingOverlay = document.querySelector('.loading-overlay');
 const navLinks = document.querySelector('.nav__links');
 const navToggle = document.getElementById('nav-toggle');
-const sections = document.querySelectorAll('section')
+const sections = document.querySelectorAll('section');
+const navContact = document.querySelector('#nav-contact');
 
 setTimeout(() => {
   content.classList.add('appear');
@@ -24,8 +25,15 @@ for(let i =0; i<navLinks.children.length;i++){
 
 const observer = new IntersectionObserver((entries, observer)=>{
   entries.forEach(entry=>{
-    // console.log(entry);
-    if(entry.isIntersecting || entry.intersectionRatio){
+    if(entry.isIntersecting){
+      if(entry.target.id !== "home" ){
+        navContact.style.opacity = "1";
+        navContact.style.pointerEvents = "unset";
+      }
+      else{
+        navContact.style.opacity = "0";
+        navContact.style.pointerEvents = "none";
+      }
       entry.target.classList.add('visible');
       document.getElementById(`${entry.target.id}-link`).classList.add('visible')
     }
