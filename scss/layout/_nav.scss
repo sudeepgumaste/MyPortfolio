@@ -148,12 +148,6 @@
 
             }
             
-            .nav__links{
-                &__contact{
-                    display: unset;
-                }
-            }
-
             &.toggled {
                 .nav__hamburger {
                     &:nth-child(1) {
@@ -168,6 +162,9 @@
         }
 
         .nav__links {
+            &__contact{
+                display: unset;
+            }
             position: absolute;
             top: 0;
             left: 100%;

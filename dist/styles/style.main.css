@@ -737,9 +737,6 @@ textarea {
     -webkit-transition: all ease 0.3s;
     transition: all ease 0.3s;
   }
-  .nav .nav__toggle .nav__links__contact {
-    display: unset;
-  }
   .nav .nav__toggle.toggled .nav__hamburger:nth-child(1) {
     -webkit-transform: translateX(13px) translateY(5px) rotate(30deg);
             transform: translateX(13px) translateY(5px) rotate(30deg);
@@ -770,6 +767,9 @@ textarea {
     transition: -webkit-transform ease 0.5s;
     transition: transform ease 0.5s;
     transition: transform ease 0.5s, -webkit-transform ease 0.5s;
+  }
+  .nav .nav__links__contact {
+    display: unset;
   }
   .nav .nav__links li {
     margin-right: 0 !important;
