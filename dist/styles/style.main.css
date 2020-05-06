@@ -383,19 +383,50 @@ textarea {
   border-radius: 0.3rem;
 }
 
-.contact__form input, .contact__form textarea {
+.contact__form .input-group {
   background-color: rgba(255, 255, 255, 0.1);
-  border: none;
-  margin: 1rem 0rem;
-  padding: 1rem 1rem;
+  position: relative;
+  margin: 1.5rem 0rem;
   border-radius: 0.3rem;
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.contact__form input:focus, .contact__form textarea:focus {
+.contact__form .input-group input, .contact__form .input-group textarea {
+  width: 100%;
+  border-radius: 0.3rem;
+}
+
+.contact__form .input-group input:focus + .input-group__placeholder, .contact__form .input-group input:valid + .input-group__placeholder, .contact__form .input-group textarea:focus + .input-group__placeholder, .contact__form .input-group textarea:valid + .input-group__placeholder {
+  -webkit-transform: translate(0.2rem, -3.5rem);
+          transform: translate(0.2rem, -3.5rem);
+}
+
+.contact__form .input-group input:focus, .contact__form .input-group textarea:focus {
   -webkit-box-shadow: 0 0 3pt 1pt rgba(255, 255, 255, 0.4);
           box-shadow: 0 0 3pt 1pt rgba(255, 255, 255, 0.4);
+}
+
+.contact__form .input-group__placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1rem;
+  position: absolute;
+  top: 1.7rem;
+  -webkit-transform: translate(1rem, -50%);
+          transform: translate(1rem, -50%);
+  -webkit-transition: -webkit-transform ease 0.3s;
+  transition: -webkit-transform ease 0.3s;
+  transition: transform ease 0.3s;
+  transition: transform ease 0.3s, -webkit-transform ease 0.3s;
+}
+
+.contact__form input, .contact__form textarea {
+  background: none;
+  border: none;
+  padding: 1rem 1rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1rem;
 }
 
 .contact__form .button {

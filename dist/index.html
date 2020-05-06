@@ -11,7 +11,7 @@
     <script src="./scripts/main.js" defer></script>
     <!-- <link rel="icon" href="/images/favicon.ico?" type="image/x-icon"> -->
     <title>Sudeep Gumaste</title>
-    <!-- Design of the page is inspired by https://brittanychiang.com/ -->
+    <!-- The design of the page is inspired by https://brittanychiang.com/ -->
 </head>
 
 <body>
@@ -138,10 +138,22 @@
                 <div class="container">
                     <h1>Contact Me</h1>
                     <form class="contact__form" action="https://formspree.io/mlebywbn" method="POST">
-                        <input required type="text"  name="name" placeholder="Your name ">
-                        <input required type="email"  name="email" placeholder="Your email">
-                        <input required type="text"  name="subject" placeholder="Subject">
-                        <textarea required name="description" placeholder="Message" rows="9"></textarea>
+                        <div class="input-group">
+                            <input required type="text"  name="name">
+                            <label for="name" class="input-group__placeholder">Name</label>
+                        </div>
+                        <div class="input-group">
+                            <input required type="text"  name="email">
+                            <label for="email" class="input-group__placeholder">Email</label>
+                        </div>
+                        <div class="input-group">
+                            <input required type="text"  name="subject">
+                            <label for="subject" class="input-group__placeholder">Subject</label>
+                        </div>
+                        <div class="input-group">
+                            <textarea required name="description" rows="9"></textarea>
+                            <label for="subject" class="input-group__placeholder">Message</label>
+                        </div>
                         <button class="button" type="submit">Send</button>
                     </form>
                 </div>

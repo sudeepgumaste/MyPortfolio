@@ -22,20 +22,40 @@
     flex-direction: column;
     padding: 2rem 3rem;
     border-radius: 0.3rem;
-    input, textarea{
+    .input-group{
       background-color: rgba($color: #FFFFFF, $alpha: 0.1);
-      // background: none;
+      position: relative;
+      margin: 1.5rem 0rem;
+      border-radius: 0.3rem;
+      display: flex;
+      input, textarea{
+        width: 100%;
+        border-radius: 0.3rem;
+        &:focus + .input-group__placeholder, &:valid + .input-group__placeholder{
+          transform: translate(0.2rem, -3.5rem);
+        }
+        &:focus{
+          box-shadow: 0 0 3pt 1pt rgba(#fff, 0.4);
+        }
+      }
+      &__placeholder{
+        color: rgba($color: #fff, $alpha: 0.5);
+        font-size: 1rem;
+        position: absolute;
+        top: 1.7rem;
+        transform: translate(1rem, -50%);
+        transition: transform ease 0.3s;
+      }
+    }
+    input, textarea{
+      background: none;
       border: none;
       // border: rgba(#fff, 0.4) 2px solid;
-      margin: 1rem 0rem;
       padding: 1rem 1rem;
-      border-radius: 0.3rem;
       color: rgba(#fff, 0.5);
       font-size: 1rem;
 
-      &:focus{
-        box-shadow: 0 0 3pt 1pt rgba(#fff, 0.4);
-      }
+      // 
     }
     .button{
       margin-top: 2rem;
