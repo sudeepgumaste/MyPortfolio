@@ -14,7 +14,6 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Signika', sans-serif;
 }
 
 a {
@@ -349,12 +348,13 @@ textarea {
 
 .contact {
   opacity: 0;
-  -webkit-transform: translateX(2rem);
-          transform: translateX(2rem);
+  -webkit-transform: translateX(-2rem);
+          transform: translateX(-2rem);
   -webkit-transition: opacity ease 0.9s, -webkit-transform ease 0.9s;
   transition: opacity ease 0.9s, -webkit-transform ease 0.9s;
   transition: opacity ease 0.9s, transform ease 0.9s;
   transition: opacity ease 0.9s, transform ease 0.9s, -webkit-transform ease 0.9s;
+  font-family: 'Signika', sans-serif;
 }
 
 .contact.visible {
@@ -574,6 +574,143 @@ textarea {
 
 @media screen and (max-width: 600px) {
   .about p {
+    font-size: 1rem;
+  }
+}
+
+.experience {
+  opacity: 0;
+  -webkit-transform: translateX(2rem);
+          transform: translateX(2rem);
+  -webkit-transition: opacity ease 0.9s, -webkit-transform ease 0.9s;
+  transition: opacity ease 0.9s, -webkit-transform ease 0.9s;
+  transition: opacity ease 0.9s, transform ease 0.9s;
+  transition: opacity ease 0.9s, transform ease 0.9s, -webkit-transform ease 0.9s;
+}
+
+.experience.visible {
+  -webkit-transform: translateX(0rem);
+          transform: translateX(0rem);
+  opacity: 1;
+}
+
+.experience h1 {
+  font-family: "Product Sans Regular";
+  color: #d1ced5;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.experience__grid {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  color: #d1ced5;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  background: rgba(0, 0, 0, 0.1);
+      grid-template-areas: "employers details details details";
+}
+
+.experience__grid .experience__employers {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: employers;
+  font-family: "Product Sans Regular", sans-serif;
+}
+
+.experience__grid .experience__employers .experience__button {
+  padding: 1rem;
+  display: inline-block;
+  width: 100%;
+  -webkit-transition: background ease 0.3s;
+  transition: background ease 0.3s;
+  background: rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.experience__grid .experience__employers .experience__button::after {
+  position: absolute;
+  content: "";
+  width: 4px;
+  height: 100%;
+  background-color: #6689a7;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  -webkit-transition: opacity ease 0.3s;
+  transition: opacity ease 0.3s;
+}
+
+.experience__grid .experience__employers .experience__button:hover {
+  background: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+.experience__grid .experience__employers .experience__button:hover::after {
+  opacity: 1;
+}
+
+.experience__grid .experience__details {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-area: details;
+  padding: 1rem;
+  padding-left: 3rem;
+  background: rgba(0, 0, 0, 0.2);
+  font-family: "Roboto";
+  font-weight: 200;
+}
+
+.experience__grid .experience__details .experience__title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-left: -1rem;
+  margin-bottom: 0.3rem;
+  font-family: "Product Sans Regular", sans-serif;
+}
+
+.experience__grid .experience__details .experience__title span {
+  color: #6689a7;
+}
+
+.experience__grid .experience__details .experience__duration {
+  margin-left: -1rem;
+  font-size: 0.8rem;
+  margin-bottom: 1.5rem;
+  color: #6689a7;
+}
+
+.experience__grid .experience__details li {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.experience__grid .experience__details li span {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1165px) {
+  .experience h1 {
+    font-size: 1.6rem;
+  }
+  .experience__grid {
+    padding: 0;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "employers" "details";
+  }
+  .experience__grid .experience__employers .experience__button {
+    width: unset;
+  }
+  .experience__grid .experience__details {
+    padding-left: 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .experience p {
     font-size: 1rem;
   }
 }
@@ -844,4 +981,11 @@ textarea {
           justify-content: center;
   color: #d1ced5;
   margin-top: 4rem;
+  font-size: 0.9rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.footer a {
+  color: white;
+  font-weight: 500;
 }

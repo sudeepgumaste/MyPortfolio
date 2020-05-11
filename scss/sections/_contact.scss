@@ -1,7 +1,8 @@
 .contact{
   opacity: 0;
-  transform: translateX(2rem);
+  transform: translateX(-2rem);
   transition: opacity ease 0.9s, transform ease 0.9s;
+  font-family: 'Signika', sans-serif;
 
   &.visible{
   transform: translateX(0rem);
