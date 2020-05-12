@@ -1,6 +1,6 @@
 .contact{
   opacity: 0;
-  transform: translateX(-2rem);
+  transform: translateX(2rem);
   transition: opacity ease 0.9s, transform ease 0.9s;
   font-family: 'Signika', sans-serif;
 
@@ -24,7 +24,7 @@
     padding: 2rem 3rem;
     border-radius: 0.3rem;
     .input-group{
-      background-color: rgba($color: #FFFFFF, $alpha: 0.1);
+      background-color: rgba($color: #FFFFFF, $alpha: 0.05);
       position: relative;
       margin: 1.5rem 0rem;
       border-radius: 0.3rem;
