@@ -173,6 +173,16 @@
         .nav__links {
             &__contact{
                 display: unset;
+                a{
+                    width: 2rem;
+                    height: 2rem;
+                    &:not(:last-child){
+                        margin-right: 1.2rem;
+                    }
+                    img{
+                        height: 100%;
+                    }
+                }
             }
             position: absolute;
             top: 0;
@@ -180,7 +190,7 @@
             z-index: 5;
             background-color: lighten($color: $background-secondary-color, $amount: 2%);
             height: 100vh;
-            width: 75%;
+            width: 80%;
             flex-direction: column;
             justify-content: space-evenly;
             align-items: center;

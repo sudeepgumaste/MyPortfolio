@@ -1122,7 +1122,7 @@ textarea {
     z-index: 5;
     background-color: #00052e;
     height: 100vh;
-    width: 75%;
+    width: 80%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1140,6 +1140,16 @@ textarea {
   }
   .nav .nav__links__contact {
     display: unset;
+  }
+  .nav .nav__links__contact a {
+    width: 2rem;
+    height: 2rem;
+  }
+  .nav .nav__links__contact a:not(:last-child) {
+    margin-right: 1.2rem;
+  }
+  .nav .nav__links__contact a img {
+    height: 100%;
   }
   .nav .nav__links li {
     margin-right: 0 !important;
