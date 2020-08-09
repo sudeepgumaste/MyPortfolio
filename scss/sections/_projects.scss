@@ -39,11 +39,11 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba($color: lighten($background-primary-color, 20), $alpha: 0.2);
-        transition: background 0.2s ease;
+        background: rgba($background-primary-color, $alpha: 0.7);
+        transition: background 0.3s ease-in-out;
       }
       &:hover::after{
-        background: rgba($color: lighten($background-primary-color, 20), $alpha: 0.0);          
+        background: rgba($background-primary-color, $alpha: 0.0);          
       }
     }
 
@@ -64,7 +64,7 @@
         display: flex;
         align-items: center;
         height: 10rem;
-        width: 120%;
+        width: 118%;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -72,13 +72,20 @@
         background: lighten($color: $background-primary-color, $amount: 3%);
       }
       #{$root}__title {
-        font-size: 2rem;
+        font-size: 1.5rem;
         margin-left: auto;
         font-weight: bold;
       }
+      #{$root}__tech{
+        margin-top: auto;
+        margin-left: auto;
+        font-size: 0.8rem;
+        font-family: "Fira Mono", sans-serif !important;
+        color: $primary-color;
+      }
       #{$root}__links {
         margin-left: auto;
-        margin-top: auto;
+        margin-top: 1.7rem;
         img {
           width: 1.5rem;
         }
@@ -94,9 +101,55 @@
       #{$root}__title {
         margin-left: unset;
       }
+      #{$root}__tech{
+        margin-left: 0;
+        margin-right: auto;
+      }
       #{$root}__links {
         margin-left: unset;
-        margin-top: auto;
+      }
+    }
+  }
+
+  &__other-projects{
+    margin-top: 8rem;
+    text-align: center;
+    color: $secondary-color;
+    font-family: "Product Sans Regular", "Roboto", sans-serif;
+
+    &__header{
+      font-size: 1.8rem !important;
+    }
+
+    &__folders{
+      margin-top: 4rem;
+      display: grid;
+      justify-content: center;
+      grid-template-columns: repeat(3, 300px);
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    &__folder{
+      border-radius: 4px;
+      margin-top: 20px;
+      height: 350px;
+      padding: 1.5rem;
+      text-align: left;
+      box-shadow: 4px 4px 20px rgba($color: #000000, $alpha: .3);
+      transition: transform 300ms ease;
+      background: lighten($color: $background-primary-color, $amount: 1%);
+      &:hover, &:focus-within{
+        transform: translateY(-20px);
+      }
+      
+      &__title{
+        font-size: 1.3rem;
+        height: 6rem;
+      }
+      
+      &__description{
+        color: $primary-color;
+        line-height: 1.4rem;
       }
     }
   }
@@ -119,6 +172,21 @@
         }
       }
     }
+    &__other-projects{
+      &__header{
+        font-size: 2rem !important;
+      }
+  
+      &__folders{
+        grid-template-columns: repeat(3, 250px);
+        &__folder{
+          height: 300px;
+          justify-items: center;
+          // background: red;
+          box-shadow: 4px 4px 20px rgba($color: #000000, $alpha: .3);
+        }
+      }
+    }
   }
 }
 
@@ -131,7 +199,7 @@
       #{$root}__image{
         width: 100%;
         &::after{
-          background: rgba($color:$background-primary-color, $alpha: 0.8)
+          background: rgba($color:$background-primary-color, $alpha: 0.85)
         }
       }
       #{$root}__description{
@@ -160,6 +228,17 @@
         }
       }
     }
+    &__other-projects{
+      &__header{
+        font-size: 1.5rem !important;
+      }
+  
+      &__folders{
+        grid-template-columns: repeat(2, 250px);
+        margin: 0 2rem;
+        margin-top: 2rem;
+      }
+    }
   }
 }
 
@@ -167,6 +246,17 @@
   .projects {
     p {
       font-size: 1rem;
+    }
+    &__other-projects{
+      &__header{
+        font-size: 1.5rem !important;
+      }
+  
+      &__folders{
+        grid-template-columns: minmax(100%, 300px);
+        margin: 0 2rem;
+        margin-top: 2rem;
+      }
     }
   }
 }

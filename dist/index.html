@@ -145,34 +145,12 @@
                     <h1>Experience</h1>
                     <div class="experience__grid">
                         <div class="experience__employers">
-                            <div class="experience__button">
+                            <div class="experience__button selected">
                                 Transil Inc.
                             </div>
-                        </div>
-                        <div class="experience__details">
-                            <div class="experience__title">
-                                Full Stack Web developer @ <span>Transil Inc.</span>
-                            </div>
-                            <div class="experience__duration">
-                                Jun 2019 - Present
-                            </div>
-                            <ul>
-                                <li>
-                                    Wrote UI Kit with react which consisted of highly reusable components which helped my teammates to pick up the pace
-                                </li>
-                                <li>
-                                    Wrote several animated components while making sure that they maintain 60 fps
-                                </li>
-                                <li>
-                                    Setup a CI/CD pipeline on AWS using elastic beanstalk and github actions which sped up the integration and deployment.
-                                </li>
-                                <li>
-                                    Designed the project directory structure and introduced coding standards like SOLID design principles and BEM conventions that improved the maintainability of the code and increased the ease of integration
-                                </li>
-                                <li>
-                                    <span>Tools and Technologies : </span> Node.js, Express.js, Redis, React.js, Redux, (S)CSS, MongoDB, GraphQL, AWS
-                                </li>
-                            </ul>
+                            <!-- <div class="experience__button">
+                                Peblio.co
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -180,6 +158,26 @@
             <section class="projects" id="projects">
                 <div class="container">
                     <h1>Projects</h1>
+                    <div class="projects__project-container">
+                        <div class="project-container__image" style="background-image: url(./assets/images/project2.png);">
+                        </div>
+                        <div class="project-container__description">
+                            <div class="project-container__title">
+                                CleanKLE
+                            </div>
+                            <div class="project-container__textbox">
+                                A website for institutes where students can report issues regarding cleanliness by uploading a photo to support their claim. It also has a admin console where administrator can view the problems posted by students and marks the issues resolved once they are taken care of
+                            </div>
+                            <div class="project-container__tech">
+                                Python • Flask • MySQL • Bootstrap 4
+                            </div>
+                            <div class="project-container__links">
+                                <a href="https://github.com/sudeepgumaste/cleanKLE" target="_blank">
+                                    <img src="./assets/logos/github-logo.svg" alt="github">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                     <div class="projects__project-container">
                         <div class="project-container__image" style="background-image: url(./assets/images/project1.png);">
                         </div>
@@ -190,47 +188,103 @@
                             <div class="project-container__textbox">
                                 A web application to search for images/wallpapers/artworks from unsplash.com contributed by various artist around the world. This application has an infinite scroll feature implemented for pagination
                             </div>
-                            <div class="project-container__links">
-                                <a href="https://github.com/sudeepgumaste/unsplash-findawall">
-                                    <img src="./assets/logos/github-logo.svg" alt="github">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- <div class="projects__project-container">
-                        <div class="project-container__image">
-
-                        </div>
-                        <div class="project-container__description">
-                            <div class="project-container__title">
-                                CleanKLE
-                            </div>
-                            <div class="project-container__textbox">
-                                A website for institutes where students can report issues regarding cleanliness by uploading a photo to support their claim. It also has a admin console where administrator can view the problems posted by students and marks the issues resolved once they are taken care of
+                            <div class="project-container__tech">
+                                ReactJS • Styled Components • Node • Unsplash API
                             </div>
                             <div class="project-container__links">
-                                <a href="https://github.com/sudeepgumaste/cleanKLE">
+                                <a href="https://github.com/sudeepgumaste/unsplash-findawall" target="_blank">
                                     <img src="./assets/logos/github-logo.svg" alt="github">
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="projects__project-container">
-                        <div class="project-container__image">
-
+                        <div class="project-container__image" style="background-image: url(./assets/images/project4.png);">
+                        </div>
+                        <div class="project-container__description">
+                            <div class="project-container__title">
+                                Todo List
+                            </div>
+                            <div class="project-container__textbox">
+                                Minimilast cross platform todo list desktop application with categorization of tasks
+                            </div>
+                            <div class="project-container__tech">
+                                ReactJS • Styled Components • ElectronJS
+                            </div>
+                            <div class="project-container__links">
+                                <a href="https://github.com/sudeepgumaste/TodoList-Electron-ReactJS" target="_blank">
+                                    <img src="./assets/logos/github-logo.svg" alt="github">
+                                </a> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="projects__project-container">
+                        <div class="project-container__image" style="background-image: url(./assets/images/project3.png);">
                         </div>
                         <div class="project-container__description">
                             <div class="project-container__title">
                                 WarDrobe
                             </div>
                             <div class="project-container__textbox">
-                                
+                                A web app with elegant and responsive UI that assists users to build their personalized wardrobe with apparels from various online shopping web sites
+                            </div>
+                            <div class="project-container__tech">
+                                ReactJS • Redux • scss • Node • Puppeteer
                             </div>
                             <div class="project-container__links">
-                                
+                                <a href="https://github.com/sudeepgumaste/WarDrobe" target="_blank">
+                                    <img src="./assets/logos/github-logo.svg" alt="github">
+                                </a> 
                             </div>
                         </div>
-                    </div> -->
+                    </div>
+                    <div class="projects__other-projects">
+                        <h2 class="projects__other-projects__header">
+                            Other Projects
+                        </h2>
+                        <div class="projects__other-projects__folders">
+                            <div class="projects__other-projects__folder">
+                                <h3 class="projects__other-projects__folder__title">
+                                    Deno CRUD
+                                </h3>
+                                <p class="projects__other-projects__folder__description">
+                                    A simple Dino sever that has Create, Read, Update and Delete functionality built into it and is connected to mongoDB.  
+                                </p>
+                            </div>
+                            <div class="projects__other-projects__folder">
+                                <h3 class="projects__other-projects__folder__title">
+                                    Live Chat
+                                </h3>
+                                <p class="projects__other-projects__folder__description">
+                                    A realtime chat web applications built for phones and has custom room functionality  
+                                </p>
+                            </div>
+                            <div class="projects__other-projects__folder">
+                                <h3 class="projects__other-projects__folder__title">
+                                    Express Auth
+                                </h3>
+                                <p class="projects__other-projects__folder__description">
+                                    Secure starter template for express projects requiring authorization using JSON web tokens. 
+                                </p>
+                            </div>                            
+                            <div class="projects__other-projects__folder">
+                                <h3 class="projects__other-projects__folder__title">
+                                    react-protected-route-component
+                                </h3>
+                                <p class="projects__other-projects__folder__description">
+                                    A react component that has route protection functionality. Built on top of Route component from react-router-dom. Published on npm
+                                </p>
+                            </div>                            
+                            <div class="projects__other-projects__folder">
+                                <h3 class="projects__other-projects__folder__title">
+                                    react-infinite-scroll-wrapper
+                                </h3>
+                                <p class="projects__other-projects__folder__description">
+                                    A react component that adds infinite scroll functionality for pagination. Published on npm
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
             <section class="contact" id="contact">

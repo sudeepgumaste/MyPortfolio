@@ -27,7 +27,8 @@ a:focus {
   outline: none;
 }
 
-input, button:focus {
+input,
+button:focus {
   outline: none;
 }
 
@@ -51,7 +52,8 @@ section {
   min-height: 100vh;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   outline: none;
 }
 
@@ -119,6 +121,36 @@ textarea {
   100% {
     -webkit-transform: rotate(356deg);
             transform: rotate(356deg);
+  }
+}
+
+::-webkit-scrollbar {
+  height: 0.7rem;
+  width: 0.7rem;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+  cursor: pointer;
+  background: #000215;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000638;
+}
+
+@media screen and (max-width: 1165px) {
+  ::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+    cursor: unset;
+  }
+  ::-webkit-scrollbar-track {
+    cursor: pointer;
+    background: unset;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: unset;
   }
 }
 
@@ -626,8 +658,11 @@ textarea {
   width: 100%;
   -webkit-transition: background ease 0.3s;
   transition: background ease 0.3s;
-  background: rgba(0, 0, 0, 0.2);
   position: relative;
+}
+
+.experience__grid .experience__employers .experience__button.selected {
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .experience__grid .experience__employers .experience__button::after {
@@ -766,13 +801,13 @@ textarea {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 15, 138, 0.2);
-  -webkit-transition: background 0.2s ease;
-  transition: background 0.2s ease;
+  background: rgba(0, 4, 36, 0.7);
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
 }
 
 .projects__project-container .project-container__image:hover::after {
-  background: rgba(0, 15, 138, 0);
+  background: rgba(0, 4, 36, 0);
 }
 
 .projects__project-container .project-container__description {
@@ -803,7 +838,7 @@ textarea {
       -ms-flex-align: center;
           align-items: center;
   height: 10rem;
-  width: 120%;
+  width: 118%;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -813,14 +848,22 @@ textarea {
 }
 
 .projects__project-container .project-container__description .project-container__title {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-left: auto;
   font-weight: bold;
 }
 
+.projects__project-container .project-container__description .project-container__tech {
+  margin-top: auto;
+  margin-left: auto;
+  font-size: 0.8rem;
+  font-family: "Fira Mono", sans-serif !important;
+  color: #d1ced5;
+}
+
 .projects__project-container .project-container__description .project-container__links {
   margin-left: auto;
-  margin-top: auto;
+  margin-top: 1.7rem;
 }
 
 .projects__project-container .project-container__description .project-container__links img {
@@ -843,9 +886,68 @@ textarea {
   margin-left: unset;
 }
 
+.projects__project-container:nth-child(2n-1) .project-container__tech {
+  margin-left: 0;
+  margin-right: auto;
+}
+
 .projects__project-container:nth-child(2n-1) .project-container__links {
   margin-left: unset;
-  margin-top: auto;
+}
+
+.projects__other-projects {
+  margin-top: 8rem;
+  text-align: center;
+  color: #6689a7;
+  font-family: "Product Sans Regular", "Roboto", sans-serif;
+}
+
+.projects__other-projects__header {
+  font-size: 1.8rem !important;
+}
+
+.projects__other-projects__folders {
+  margin-top: 4rem;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-columns: (300px)[3];
+      grid-template-columns: repeat(3, 300px);
+  gap: 1.5rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.projects__other-projects__folder {
+  border-radius: 4px;
+  margin-top: 20px;
+  height: 350px;
+  padding: 1.5rem;
+  text-align: left;
+  -webkit-box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3);
+          box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3);
+  -webkit-transition: -webkit-transform 300ms ease;
+  transition: -webkit-transform 300ms ease;
+  transition: transform 300ms ease;
+  transition: transform 300ms ease, -webkit-transform 300ms ease;
+  background: #000529;
+}
+
+.projects__other-projects__folder:hover, .projects__other-projects__folder:focus-within {
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+}
+
+.projects__other-projects__folder__title {
+  font-size: 1.3rem;
+  height: 6rem;
+}
+
+.projects__other-projects__folder__description {
+  color: #d1ced5;
+  line-height: 1.4rem;
 }
 
 @media screen and (max-width: 1165px) {
@@ -858,6 +960,19 @@ textarea {
   .projects__project-container .project-container__description .project-container__title {
     font-size: 1.5rem;
   }
+  .projects__other-projects__header {
+    font-size: 2rem !important;
+  }
+  .projects__other-projects__folders {
+    -ms-grid-columns: (250px)[3];
+        grid-template-columns: repeat(3, 250px);
+  }
+  .projects__other-projects__folders__folder {
+    height: 300px;
+    justify-items: center;
+    -webkit-box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3);
+            box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3);
+  }
 }
 
 @media screen and (max-width: 769px) {
@@ -869,7 +984,7 @@ textarea {
     width: 100%;
   }
   .projects__project-container .project-container__image::after {
-    background: rgba(0, 4, 36, 0.8);
+    background: rgba(0, 4, 36, 0.85);
   }
   .projects__project-container .project-container__description {
     padding: 1rem;
@@ -899,11 +1014,29 @@ textarea {
   .projects__project-container .project-container__description .project-container__links {
     margin-top: unset;
   }
+  .projects__other-projects__header {
+    font-size: 1.5rem !important;
+  }
+  .projects__other-projects__folders {
+    -ms-grid-columns: (250px)[2];
+        grid-template-columns: repeat(2, 250px);
+    margin: 0 2rem;
+    margin-top: 2rem;
+  }
 }
 
 @media screen and (max-width: 600px) {
   .projects p {
     font-size: 1rem;
+  }
+  .projects__other-projects__header {
+    font-size: 1.5rem !important;
+  }
+  .projects__other-projects__folders {
+    -ms-grid-columns: minmax(100%, 300px);
+        grid-template-columns: minmax(100%, 300px);
+    margin: 0 2rem;
+    margin-top: 2rem;
   }
 }
 
@@ -937,8 +1070,16 @@ textarea {
   width: 100%;
   height: 5rem;
   padding: 0 8rem;
-  background: rgba(0, 4, 36, 0.8);
+  background: #000424;
   z-index: 100;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.nav.bg-toggle {
+  background: #000529;
+  -webkit-box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .nav .nav__brand {
