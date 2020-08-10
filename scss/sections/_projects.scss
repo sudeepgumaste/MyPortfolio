@@ -125,11 +125,13 @@
       margin-top: 4rem;
       display: grid;
       justify-content: center;
-      grid-template-columns: repeat(3, 300px);
-      gap: 1.5rem;
+      grid-template-columns: repeat(3, 330px);
+      gap: 1rem;
       flex-wrap: wrap;
     }
     &__folder{
+      display: flex;
+      flex-direction: column;
       border-radius: 4px;
       margin-top: 20px;
       height: 350px;
@@ -141,15 +143,32 @@
       &:hover, &:focus-within{
         transform: translateY(-20px);
       }
+
+      &__link{
+        display: flex;
+        a{
+          img{
+            width: 24px;
+            height: 24px;
+          }
+        }
+        margin-bottom: 2rem;
+      }
       
       &__title{
         font-size: 1.3rem;
-        height: 6rem;
+        height: 4rem;
       }
       
       &__description{
         color: $primary-color;
         line-height: 1.4rem;
+      }
+
+      &__tech{
+        margin-top: auto;
+        font-size: 0.8rem;
+        font-family: "Fira Mono", sans-serif !important;
       }
     }
   }
