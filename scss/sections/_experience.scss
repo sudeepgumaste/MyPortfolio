@@ -17,6 +17,7 @@
 
   &__grid {
     width: 100%;
+    height: 75%;
     display: grid;
     color: $primary-color;
     grid-template-columns: repeat(4, 1fr);
@@ -28,6 +29,10 @@
       font-family: "Product Sans Regular", sans-serif;
 
       #{$root}__button {
+        background: none;
+        border: none;
+        color: $primary-color;
+        font-family: "Product Sans Regular", sans-serif;
         padding: 1rem;
         display: inline-block;
         width: 100%;

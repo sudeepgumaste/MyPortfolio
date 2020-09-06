@@ -190,6 +190,7 @@
           font-size: 1.5rem;
         }
       }
+
     }
     &__other-projects{
       &__header{
@@ -231,6 +232,7 @@
         justify-content: space-between;
         #{$root}__title{
           color: $primary-color;
+          margin-left: 0;
         }
         #{$root}__textbox{
           position: unset;
@@ -240,10 +242,15 @@
           // color: $secondary-color;
           width: 100%;
           background: none;
-          text-align: right;
         }
         #{$root}__links{
           margin-top: unset;
+          margin-left: 0;
+        }
+        
+        #{$root}__tech{
+          margin-top: 0.5rem;
+          margin-left: 0;
         }
       }
     }

@@ -14,7 +14,6 @@ setTimeout(() => {
 navToggle.addEventListener('click', () => {
   navLinks.classList.toggle('toggled');
   navToggle.classList.toggle('toggled');
-
 });
 
 for(let i =0; i<navLinks.children.length;i++){
@@ -54,34 +53,76 @@ sections.forEach(section=>{
   observer.observe(section)
 })
 
-
+// Experiences
+let selectedExperience = 0;
+const experiences = [
+  `
+    <div class="experience__title">
+        Full Stack Web developer @ <span>Transil Inc.</span>
+    </div>
+    <div class="experience__duration">
+        Jun 2019 - Jun 2020
+    </div>
+    <ul>
+        <li>
+            Wrote UI Kit with react which consisted of highly reusable components which helped my teammates to pick up the pace
+        </li>
+        <li>
+            Wrote several animated components while making sure that they maintain 60 fps
+        </li>
+        <li>
+            Setup a CI/CD pipeline on AWS using elastic beanstalk and github actions which sped up the integration and deployment.
+        </li>
+        <li>
+            Designed the project directory structure and introduced coding standards like SOLID design principles and BEM conventions that improved the maintainability of the code and increased the ease of integration
+        </li>
+        <li>
+            <span>Tools and Technologies : </span> Node.js, Express.js, Redis, React.js, Redux, (S)CSS, MongoDB, GraphQL, AWS
+        </li>
+    </ul>
+  `,
+  `
+  <div class="experience__title">
+        Front End developer @ <span>Peblio</span>
+    </div>
+    <div class="experience__duration">
+        Jul 2020 - Sep 2020
+    </div>
+    <ul>
+        <li>
+          Converted design system to reusable react components with micro interactions.
+        </li>
+        <li>
+            Wrote styles for the same with scss following BEM conventions.
+        </li>
+        <li>
+            Worked with the backend team to integrate the frontend with backend APIs.
+        </li>
+        <li>
+            Coded actions and reducers for redux stores that links components and enables efficient flow of data between the components
+        </li>
+        <li>
+            Wrote unit tests for the components and integration tests to ensure the proper working of the application.
+        </li>
+        <li>
+            <span>Tools and Technologies : </span> React.js, Redux, (s)css, Jest, REST APIs, webpack, storybook, Git and Github
+        </li>
+    </ul>
+  `
+]
 const experienceGrid = document.querySelector('.experience__grid');
-
 const experienceDetails = document.createElement('div');
 experienceDetails.classList.add('experience__details');
-experienceDetails.innerHTML = `
-<div class="experience__title">
-    Full Stack Web developer @ <span>Transil Inc.</span>
-</div>
-<div class="experience__duration">
-    Jun 2019 - Jun 2020
-</div>
-<ul>
-    <li>
-        Wrote UI Kit with react which consisted of highly reusable components which helped my teammates to pick up the pace
-    </li>
-    <li>
-        Wrote several animated components while making sure that they maintain 60 fps
-    </li>
-    <li>
-        Setup a CI/CD pipeline on AWS using elastic beanstalk and github actions which sped up the integration and deployment.
-    </li>
-    <li>
-        Designed the project directory structure and introduced coding standards like SOLID design principles and BEM conventions that improved the maintainability of the code and increased the ease of integration
-    </li>
-    <li>
-        <span>Tools and Technologies : </span> Node.js, Express.js, Redis, React.js, Redux, (S)CSS, MongoDB, GraphQL, AWS
-    </li>
-</ul>
-`
+experienceDetails.innerHTML = experiences[selectedExperience]
 experienceGrid.appendChild(experienceDetails);
+const experienceButtons = document.querySelectorAll('.experience__button');
+
+experienceButtons.forEach((experience, index) => {
+  experience.addEventListener('click', () => {
+    experienceButtons[selectedExperience].classList.remove('selected');
+    selectedExperience = index;
+    experienceDetails.innerHTML = experiences[selectedExperience]
+    experienceGrid.appendChild(experienceDetails);
+    experience.classList.add('selected');
+  });
+})

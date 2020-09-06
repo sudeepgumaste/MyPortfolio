@@ -301,7 +301,7 @@ textarea {
     font-size: 4.5rem;
   }
   .home h2 {
-    font-size: 3rem;
+    font-size: 3.2rem;
   }
   .home p {
     font-size: 1rem;
@@ -636,6 +636,7 @@ textarea {
 
 .experience__grid {
   width: 100%;
+  height: 75%;
   display: -ms-grid;
   display: grid;
   color: #d1ced5;
@@ -653,6 +654,10 @@ textarea {
 }
 
 .experience__grid .experience__employers .experience__button {
+  background: none;
+  border: none;
+  color: #d1ced5;
+  font-family: "Product Sans Regular", sans-serif;
   padding: 1rem;
   display: inline-block;
   width: 100%;
@@ -1024,6 +1029,7 @@ textarea {
   }
   .projects__project-container .project-container__description .project-container__title {
     color: #d1ced5;
+    margin-left: 0;
   }
   .projects__project-container .project-container__description .project-container__textbox {
     position: unset;
@@ -1034,10 +1040,14 @@ textarea {
     padding: 0;
     width: 100%;
     background: none;
-    text-align: right;
   }
   .projects__project-container .project-container__description .project-container__links {
     margin-top: unset;
+    margin-left: 0;
+  }
+  .projects__project-container .project-container__description .project-container__tech {
+    margin-top: 0.5rem;
+    margin-left: 0;
   }
   .projects__other-projects__header {
     font-size: 1.5rem !important;
